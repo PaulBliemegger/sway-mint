@@ -1,0 +1,5 @@
+# Main Sway configuration
+# Keybindings, colors, gaps
+
+# Include machine-specific configs
+include ~/.config/sway/config.d/*.conf
