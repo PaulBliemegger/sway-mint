@@ -1,2 +1,54 @@
 /* Waybar style.css */
-/* Placeholder for shared Waybar styling */
+/* Placeholder for shared Waybar styling *//* General bar styling */
+window#waybar {
+    background: rgba(40, 40, 40, 0.3); /* Semi-transparent background */
+    /* border-bottom: 2px solid #458588;*/
+    color: #eeeeee;
+    font-family: "DepartureMonoNerdFont";
+}
+
+/* Individual module styling */
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background: rgba(120, 54, 179, 0.8);
+    border-radius: 5px;
+}
+
+/* This applies to ALL modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 2px 12px;
+    margin: 4px 4px; /* Adds spacing between the "pills" */
+    background-color: rgba(120, 54, 179,0.8); /* Dark grey background */
+    color: #ebdbb2; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    /*border: 1px solid rgba(255, 255, 255, 0.1);*/ /* Subtle border */
+}
+
+#battery.charging {
+    background-color: #b8bb26;
+    color: #282828;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #fb4934;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
