@@ -1,5 +1,4 @@
-/* Waybar style.css */
-/* Placeholder for shared Waybar styling *//* General bar styling */
+/* General bar styling */
 window#waybar {
     background: rgba(40, 40, 40, 0.3); /* Semi-transparent background */
     /* border-bottom: 2px solid #458588;*/
@@ -14,18 +13,23 @@ window#waybar {
     color: #ffffff;
 }
 
+/*
 #workspaces button.focused {
     background: rgba(120, 54, 179, 0.8);
     border-radius: 5px;
 }
+    */
 
 /* This applies to ALL modules */
 #clock,
 #battery,
 #cpu,
 #memory,
+#temperature,
 #network,
+#bluetooth,
 #pulseaudio,
+#backlight,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -51,4 +55,14 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Ensure icons have a bit of breathing room */
+label {
+    margin: 0 4px;
 }
